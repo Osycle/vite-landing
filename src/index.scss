@@ -1,18 +1,25 @@
 @use "./styles/mixins" as *;
 @use "./styles/fonts" as *;
-@use "./assets/bootstrap/scss/bootstrap.scss" as *;
-
+@use "./styles/helper" as *;
+// @use "./assets/bootstrap/scss/bootstrap.scss" as *;
+@use "sass:color";
 
 :root {
   --spanish-gray: #969696;
   --cultured: #f6f6f6;
-  --black: #151515;
   --eerie-black: #1b1b1b;
   --black-olive: #383f3e;
-  --gradient: linear-gradient(to right, #3fe8ab, #78cdcd);
-
-  --bs-link-color-rgb: 0, 0, 0;
+  
+  --gradient: linear-gradient(to right, #504297, #B3ABDB);
+  --black: #222222;
+  --black-text: #555555;
+  --color-1: #504297;
+  --color-1-light: #B3ABDB;
+  --color-2: #6C8429;
+  --color-2-dark: #718A2F;
 }
+
+
 
 *, *::before, *::after{
   padding: 0;
@@ -54,32 +61,18 @@ html{
     margin-bottom: 0;
   }
 }
-// .wrapper{
-//   max-width: 1440px;
-//   margin-inline: auto;
-//   padding-inline: 5rem;
-//   @include respond(phone){
-//     padding-inline: 0.8rem;
-//   }
-//   @include respond(tab-land){
-//     padding-inline: 1.5rem;
-//   }
-// }
 
-.btn{
-  background: var(--gradient);
-  padding: 0.6rem 1.2rem;
-  color: var(--black) !important;
-  border-radius: 0.5rem;
-  border: 1px solid transparent;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
+.btn-def{
   display: inline-block;
-
+  background-color: $color-1;
+  color: white;
+  padding: 1rem 3rem;
+  transition: 0.2s ease;
+  max-width: 340px;
+  text-align: center;
   &:hover{
-    border-color: #3fe8ab;
-    background: transparent;
-    color: var(--cultured) !important;
+    cursor: pointer;
+    background-color: color.adjust($color-1, $lightness: -25%);
   }
 }
 

@@ -1,13 +1,38 @@
 @use '../../styles/mixins.scss' as *;
 
 .hero {
-  background-color: var(--black);
+  .btn-def{
+    width: 100%;
+    font-size: 20px;
+  }
+  &-content{
+    max-height: 400px;
+  }
+  h1{
+    font-weight: 300;
+    color: white;
+    span{
+      background-color: gray;
+      color: transparent;
+      font-weight: 700;
+      padding: 0 5px;
+      line-height: 95%;
+      background-image: -webkit-linear-gradient(0deg, var(--color-1) 1%, var(--color-1-light) 70%);
+      background-clip: text;
+    }
+  }
   &__wrapper{
-    background-image: url("../../assets/img/hero.jpg");
+    background-image: url("../../assets/img/hero.png");
     background-position: center;
     background-size: cover;
+    background-color: $color-1;
     background-repeat: no-repeat;
-    height: 800px;
+    height: 580px;
+    display: flex;
+    align-items: center;
+    .container{
+      z-index: 1;
+    }
     &:before{
       content: "";
       position: absolute;

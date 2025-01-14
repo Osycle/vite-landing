@@ -8,7 +8,7 @@ import Status from "./components/status/Status"
 import Subscribe from "./components/subscribe/Subscribe"
 import Footer from "./components/footer/Footer"
 
-// import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 import 'bootstrap/dist/js/bootstrap'; 
 
 function App() {

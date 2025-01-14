@@ -8,20 +8,26 @@
   left: 0;
   width: 100%;
   z-index: 1;
+  color: white;
   &__wrapper{
     display: flex;
     align-items: center;
     padding-top: 20px;
   }
   &__nav{
-    margin-left: 30px;
+    margin-left: 60px;
     ul{
+      letter-spacing: 1px;
       display: flex;
-      font-weight: 700;
+      font-weight: 500;
       font-size: 16px;
       a{
         padding-left: 20px;
         padding-right: 20px;
+        transition: 0.2s ease;
+        &:hover{
+          color: $color-1-light;
+        }
       }
     }
   }
