@@ -1,0 +1,28 @@
+@use "../../styles/mixins.scss" as *;
+
+
+
+.header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+  }
+  &__nav{
+    margin-left: 30px;
+    ul{
+      display: flex;
+      font-weight: 700;
+      font-size: 16px;
+      a{
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+}

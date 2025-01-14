@@ -1,4 +1,7 @@
 @use "./styles/mixins" as *;
+@use "./styles/fonts" as *;
+@use "./assets/bootstrap/scss/bootstrap.scss" as *;
+
 
 :root {
   --spanish-gray: #969696;
@@ -7,6 +10,8 @@
   --eerie-black: #1b1b1b;
   --black-olive: #383f3e;
   --gradient: linear-gradient(to right, #3fe8ab, #78cdcd);
+
+  --bs-link-color-rgb: 0, 0, 0;
 }
 
 *, *::before, *::after{
@@ -26,9 +31,9 @@ body{
   box-sizing: border-box;
   overflow-x: hidden;
   line-height: 1.5;
-  font-family: "Inter", sans-serif;
-  background-color: var(--eerie-black);
-  color: var(--spanish-gray);
+  font-family: "Montserrat", sans-serif;
+  // background-color: var(--eerie-black);
+  color: black;
 }
 
 img{
@@ -36,21 +41,30 @@ img{
 }
 
 h1,h2,h3,h4,h5,h6{
-  font-family: "Inter", sans-serif;
-  color: var(--cultured);
+  // font-family: "Inter", sans-serif;
+  // color: var(--cultured);
 }
-
-.wrapper{
-  max-width: 1440px;
-  margin-inline: auto;
-  padding-inline: 5rem;
-  @include respond(phone){
-    padding-inline: 0.8rem;
+html{
+  a{
+    color: inherit;
+    text-decoration: none;
   }
-  @include respond(tab-land){
-    padding-inline: 1.5rem;
+  ul{
+    padding-left: 0;
+    margin-bottom: 0;
   }
 }
+// .wrapper{
+//   max-width: 1440px;
+//   margin-inline: auto;
+//   padding-inline: 5rem;
+//   @include respond(phone){
+//     padding-inline: 0.8rem;
+//   }
+//   @include respond(tab-land){
+//     padding-inline: 1.5rem;
+//   }
+// }
 
 .btn{
   background: var(--gradient);
@@ -68,3 +82,5 @@ h1,h2,h3,h4,h5,h6{
     color: var(--cultured) !important;
   }
 }
+
+
